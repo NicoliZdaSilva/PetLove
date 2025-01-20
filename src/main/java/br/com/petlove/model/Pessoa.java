@@ -2,10 +2,10 @@ package br.com.petlove.model;
 
 public class Pessoa {
 
-    protected String nome;
-    protected String cidade;
-    protected String telefone; //Regra 47997551124 - São 11 números
-    protected String senha;
+    protected static String nome;
+    protected static String cidade;
+    protected static String telefone; //Regra 47997551124 - São 11 números
+    protected static String senha;
 
     public Pessoa() {
 
@@ -18,7 +18,7 @@ public class Pessoa {
         this.senha = senha;
     }
 
-    public String getNome() {
+    public static String getNome() {
         return nome;
     }
 
@@ -30,7 +30,7 @@ public class Pessoa {
         return false;
     }
 
-    public String getCidade() {
+    public static String getCidade() {
         return cidade;
     }
 
@@ -42,7 +42,7 @@ public class Pessoa {
         return false;
     }
 
-    public String getTelefone() {
+    public static String getTelefone() {
         return telefone;
     }
 
@@ -54,7 +54,7 @@ public class Pessoa {
         return false;
     }
 
-    public String getSenha() {
+    public static String getSenha() {
         return senha;
     }
 

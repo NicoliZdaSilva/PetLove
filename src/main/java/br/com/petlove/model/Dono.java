@@ -1,5 +1,6 @@
 package br.com.petlove.model;
 
+import java.util.ArrayList;
 
 public class Dono extends Pessoa{
 
