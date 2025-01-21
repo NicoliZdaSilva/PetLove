@@ -2,6 +2,7 @@ package br.com.petlove.model;
 
 public class Veterinario extends Pessoa{
 
+    private Long id;
     private String especialidade;
 
     public Veterinario() {
@@ -11,6 +12,10 @@ public class Veterinario extends Pessoa{
     public Veterinario (String nome, String cidade, String telefone, String senha, String especialidade){
         super (nome, cidade, telefone, senha);
         this.especialidade = especialidade;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getEspecialidade() {

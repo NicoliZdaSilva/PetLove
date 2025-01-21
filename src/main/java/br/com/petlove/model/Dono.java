@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Dono extends Pessoa{
 
+    private Long id;
     private String estado;
     private ArrayList<Pet> pets;
 
@@ -15,6 +16,10 @@ public class Dono extends Pessoa{
         super (nome, cidade, telefone, estado);
         this.estado = estado;
         this.pets = new ArrayList<Pet>();
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getEstado() {
