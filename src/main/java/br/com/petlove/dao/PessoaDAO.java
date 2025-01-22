@@ -7,30 +7,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
-public class PessoaDAO implements IPessoaDAO{
+public class PessoaDAO implements IDAO<Pessoa>{
+
     @Override
-    public Pessoa save(Pessoa pessoa) {
-        try (Connection connection = ConnectionFactory.getConnection()){
-            String sql = "INSERT INTO Pessoa (nome, cidade, telefone) VALUES(?, ?, ?)";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+    public void save(Pessoa t) {
 
-            preparedStatement.setString (1, Pessoa.getNome());
-            preparedStatement.setString(2, Pessoa.getCidade());
-            preparedStatement.setString(3, Pessoa.getTelefone());
-
-            preparedStatement.executeUpdate();
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return pessoa;
     }
 
     @Override
-    public Pessoa update(Pessoa pessoa) {
-        return null;
+    public void update(Pessoa t) {
+
     }
 
     @Override
@@ -39,12 +26,12 @@ public class PessoaDAO implements IPessoaDAO{
     }
 
     @Override
-    public List<Pessoa> FindAll() {
+    public List<Pessoa> findAll() {
         return List.of();
     }
 
     @Override
-    public Optional<Pessoa> findById(Long id) {
-        return Optional.empty();
+    public Pessoa findById(Long id) {
+        return null;
     }
 }

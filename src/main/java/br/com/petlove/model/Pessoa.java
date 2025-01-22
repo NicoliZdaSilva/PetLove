@@ -54,7 +54,7 @@ public class Pessoa {
         return false;
     }
 
-    public String getSenha() {
+    public static String getSenha() {
         return senha;
     }
 
